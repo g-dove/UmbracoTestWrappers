@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Umbraco.BaseTests</id>
+    <version>$version$</version>
+    <authors>Gibe Digital Ltd</authors>
+    <owners>steve.temple</owners>
+    <licenseUrl>https://raw.githubusercontent.com/stevetemple/UmbracoTestWrappers/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/stevetemple/UmbracoTestWrappers</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Base test class to make unit testing umbraco easier</description>
+    <copyright>Copyright Gibe Digital Ltd 2015</copyright>
+    <tags>Umbraco UnitTesting</tags>
+    <dependencies>
+      <dependency id="Umbraco.TestWrappers" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

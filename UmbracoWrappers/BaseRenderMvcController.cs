@@ -12,9 +12,9 @@ namespace UmbracoTestWrappers
   {
 		public BaseRenderMvcController(IUmbracoHelper umbracoHelper) : base(umbracoHelper.CurrentUmbracoContext())
 		{
-			Umbraco = umbracoHelper;
+			UmbracoWrapper = umbracoHelper;
 		}
 
-		protected IUmbracoHelper Umbraco { get; set; }
+		protected IUmbracoHelper UmbracoWrapper { get; set; }
   }
 }

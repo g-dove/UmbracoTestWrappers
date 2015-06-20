@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("UmbracoBaseTests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Class to inherit tests from to help with unit testing")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Gibe Digital")]
 [assembly: AssemblyProduct("UmbracoBaseTests")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright © Gibe Digital Ltd 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
