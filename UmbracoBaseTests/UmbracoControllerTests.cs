@@ -7,9 +7,9 @@ using Umbraco.Core.Models;
 using Umbraco.Tests.TestHelpers;
 using Umbraco.Web;
 using Umbraco.Web.Routing;
-using UmbracoTestWrappers;
+using Gibe.UmbracoWrappers;
 
-namespace UmbracoBaseTests
+namespace Gibe.UmbracoBaseTests
 {
 	public abstract class UmbracoControllerTests : BaseRoutingTest
 	{

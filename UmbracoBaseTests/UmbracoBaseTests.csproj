@@ -7,8 +7,8 @@
     <ProjectGuid>{D10BB76D-5AAA-45BA-ACBE-90882F2B79E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UmbracoBaseTests</RootNamespace>
-    <AssemblyName>UmbracoBaseTests</AssemblyName>
+    <RootNamespace>Gibe.UmbracoBaseTests</RootNamespace>
+    <AssemblyName>Gibe.UmbracoBaseTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -200,7 +200,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UmbracoTestWrappers\UmbracoWrappers.csproj">
+    <ProjectReference Include="..\UmbracoWrappers\UmbracoWrappers.csproj">
       <Project>{d1100163-4e41-43e9-9154-bd9048ce9d74}</Project>
       <Name>UmbracoWrappers</Name>
     </ProjectReference>

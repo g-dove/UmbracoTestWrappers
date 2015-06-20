@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Umbraco.TestWrappers</id>
+    <id>Gibe.UmbracoWrappers</id>
     <version>$version$</version>
     <authors>Gibe Digital Ltd</authors>
     <owners>steve.temple</owners>

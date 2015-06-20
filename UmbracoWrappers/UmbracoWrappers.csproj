@@ -7,8 +7,8 @@
     <ProjectGuid>{D1100163-4E41-43E9-9154-BD9048CE9D74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UmbracoTestWrappers</RootNamespace>
-    <AssemblyName>UmbracoTestWrappers</AssemblyName>
+    <RootNamespace>Gibe.UmbracoWrappers</RootNamespace>
+    <AssemblyName>Gibe.UmbracoWrappers</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

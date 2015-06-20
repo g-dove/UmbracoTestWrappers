@@ -5,13 +5,13 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoBaseTests", "UmbracoBaseTests\UmbracoBaseTests.csproj", "{D10BB76D-5AAA-45BA-ACBE-90882F2B79E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoWrappers", "UmbracoTestWrappers\UmbracoWrappers.csproj", "{D1100163-4E41-43E9-9154-BD9048CE9D74}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{4D96BB32-425F-450F-903F-C83B71C95472}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoWrappers", "UmbracoWrappers\UmbracoWrappers.csproj", "{D1100163-4E41-43E9-9154-BD9048CE9D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

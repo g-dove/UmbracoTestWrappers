@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 
-namespace UmbracoTestWrappers
+namespace Gibe.UmbracoWrappers
 {
 	public class DefaultUmbracoHelper : IUmbracoHelper
 	{

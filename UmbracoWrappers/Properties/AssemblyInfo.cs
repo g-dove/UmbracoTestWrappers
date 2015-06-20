@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UmbracoTestWrappers")]
+[assembly: AssemblyTitle("UmbracoWrappers")]
 [assembly: AssemblyDescription("Wrappers to help with writing unit testable Umbraco projects")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Gibe Digital Ltd")]
-[assembly: AssemblyProduct("UmbracoTestWrappers")]
+[assembly: AssemblyProduct("UmbracoWrappers")]
 [assembly: AssemblyCopyright("Copyright © Gibe Digital Ltd 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

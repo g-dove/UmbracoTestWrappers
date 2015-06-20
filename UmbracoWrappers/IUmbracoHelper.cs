@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 
-namespace UmbracoTestWrappers
+namespace Gibe.UmbracoWrappers
 {
 	public interface IUmbracoHelper
 	{

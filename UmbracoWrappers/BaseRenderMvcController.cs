@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using Umbraco.Web.Mvc;
 
-namespace UmbracoTestWrappers
+namespace Gibe.UmbracoWrappers
 {
 	public class BaseRenderMvcController : RenderMvcController
   {
