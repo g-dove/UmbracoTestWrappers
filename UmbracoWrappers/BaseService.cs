@@ -8,11 +8,11 @@ namespace Gibe.UmbracoWrappers
 {
 	public class BaseService
 	{
-		public BaseService(IUmbracoHelper umbracoHelper)
+		public BaseService(IUmbracoWrapper umbracoWrapper)
 		{
-			Umbraco = umbracoHelper;
+			UmbracoWrapper = umbracoWrapper;
 		}
 
-		protected IUmbracoHelper Umbraco { get; set; }
+		protected IUmbracoWrapper UmbracoWrapper { get; set; }
 	}
 }

@@ -10,11 +10,11 @@ namespace Gibe.UmbracoWrappers
 {
 	public class BaseRenderMvcController : RenderMvcController
   {
-		public BaseRenderMvcController(IUmbracoHelper umbracoHelper) : base(umbracoHelper.CurrentUmbracoContext())
+		public BaseRenderMvcController(IUmbracoWrapper umbracoHelper) : base(umbracoHelper.CurrentUmbracoContext())
 		{
 			UmbracoWrapper = umbracoHelper;
 		}
 
-		protected IUmbracoHelper UmbracoWrapper { get; set; }
+		protected IUmbracoWrapper UmbracoWrapper { get; set; }
   }
 }

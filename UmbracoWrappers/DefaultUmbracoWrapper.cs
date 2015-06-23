@@ -5,7 +5,7 @@ using Umbraco.Web;
 
 namespace Gibe.UmbracoWrappers
 {
-	public class DefaultUmbracoHelper : IUmbracoHelper
+	public class DefaultUmbracoWrapper : IUmbracoWrapper
 	{
 		public UmbracoContext CurrentUmbracoContext()
 		{

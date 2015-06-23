@@ -8,7 +8,7 @@ using Umbraco.Web;
 
 namespace Gibe.UmbracoWrappers
 {
-	public interface IUmbracoHelper
+	public interface IUmbracoWrapper
 	{
 		UmbracoContext CurrentUmbracoContext();
 
