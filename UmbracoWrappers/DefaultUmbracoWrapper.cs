@@ -11,7 +11,7 @@ namespace Gibe.UmbracoWrappers
 		{
 			return UmbracoContext.Current;
 		}
-				
+
 		public IPublishedContent TypedContent(int id)
 		{
 			return CurrentUmbracoContext().ContentCache.GetById(id);
@@ -152,6 +152,11 @@ namespace Gibe.UmbracoWrappers
 			return content.AncestorsOrSelf(contentTypeAlias);
 		}
 
+		public IEnumerable<IPublishedContent> Siblings(IPublishedContent content)
+		{
+			return content.Siblings();
+		}
+
 		public bool IsAncestor(IPublishedContent content, IPublishedContent ancestor)
 		{
 			return content.IsAncestor(ancestor);
@@ -180,6 +185,11 @@ namespace Gibe.UmbracoWrappers
 		public bool IsVisible(IPublishedContent content)
 		{
 			return content.IsVisible();
+		}
+
+		public string UrlAbsolute(IPublishedContent content)
+		{
+			return content.UrlAbsolute();
 		}
 	}
 }
