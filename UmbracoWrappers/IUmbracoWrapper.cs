@@ -44,7 +44,7 @@ namespace Gibe.UmbracoWrappers
 		IPublishedContent AncestorOrSelf(IPublishedContent content);
 		IPublishedContent AncestorOrSelf(IPublishedContent content, int maxLevel);
 		IPublishedContent AncestorOrSelf(IPublishedContent content, string contentTypeAlias);
-		
+
 		IEnumerable<IPublishedContent> Ancestors(IPublishedContent content);
 		IEnumerable<IPublishedContent> Ancestors(IPublishedContent content, int maxLevel);
 		IEnumerable<IPublishedContent> Ancestors(IPublishedContent content, string contentTypeAlias);
@@ -52,6 +52,8 @@ namespace Gibe.UmbracoWrappers
 		IEnumerable<IPublishedContent> AncestorsOrSelf(IPublishedContent content);
 		IEnumerable<IPublishedContent> AncestorsOrSelf(IPublishedContent content, int maxLevel);
 		IEnumerable<IPublishedContent> AncestorsOrSelf(IPublishedContent content, string contentTypeAlias);
+
+		IEnumerable<IPublishedContent> Siblings(IPublishedContent content);
 
 		bool IsAncestor(IPublishedContent content, IPublishedContent ancestor);
 		bool IsAncestorOrSelf(IPublishedContent content, IPublishedContent ancestor);
@@ -62,7 +64,9 @@ namespace Gibe.UmbracoWrappers
 		bool HasValue(IPublishedContent content, string alias);
 
 		bool IsVisible(IPublishedContent content);
-		
+
+		string UrlAbsolute(IPublishedContent content);
+
 		#endregion
 	}
 }
