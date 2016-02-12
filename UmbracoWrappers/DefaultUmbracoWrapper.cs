@@ -17,6 +17,11 @@ namespace Gibe.UmbracoWrappers
 			return CurrentUmbracoContext().ContentCache.GetById(id);
 		}
 
+		public IEnumerable<IPublishedContent> TypedContentAtRoot()
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedContentAtRoot();
+		}
+
 		public IPublishedContent TypedMedia(int id)
 		{
 			return CurrentUmbracoContext().MediaCache.GetById(id);
