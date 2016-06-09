@@ -12,7 +12,7 @@ namespace Gibe.UmbracoWrappers
 			_umbracoWrapper = umbracoWrapper;
 		}
 
-		public UmbracoHelper UmbracoHelper()
+		private UmbracoHelper UmbracoHelper()
 		{
 			return new UmbracoHelper(_umbracoWrapper.CurrentUmbracoContext());
 		}
