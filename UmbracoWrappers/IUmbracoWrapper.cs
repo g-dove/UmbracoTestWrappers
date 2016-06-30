@@ -14,7 +14,8 @@ namespace Gibe.UmbracoWrappers
 
 		IPublishedContent TypedContent(int id);
 		IPublishedContent TypedContent(string url);
-		IEnumerable<IPublishedContent> TypedContentAtRoot();		IPublishedContent TypedMedia(int id);
+		IEnumerable<IPublishedContent> TypedContentAtRoot();
+		IPublishedContent TypedMedia(int id);
 
 		#region extension method replacements
 

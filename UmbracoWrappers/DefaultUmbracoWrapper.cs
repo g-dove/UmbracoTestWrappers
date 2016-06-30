@@ -17,14 +17,14 @@ namespace Gibe.UmbracoWrappers
 			return CurrentUmbracoContext().ContentCache.GetById(id);
 		}
 
-		public IEnumerable<IPublishedContent> TypedContentAtRoot()
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedContentAtRoot();
-		}
-
 		public IPublishedContent TypedContent(string url)
 		{
 			return CurrentUmbracoContext().ContentCache.GetByRoute(url);
+		}
+
+		public IEnumerable<IPublishedContent> TypedContentAtRoot()
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedContentAtRoot();
 		}
 
 		public IPublishedContent TypedMedia(int id)
