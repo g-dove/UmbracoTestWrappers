@@ -13,6 +13,7 @@ namespace Gibe.UmbracoWrappers
 		UmbracoContext CurrentUmbracoContext();
 
 		IPublishedContent TypedContent(int id);
+		IPublishedContent TypedContent(string url);
 		IPublishedContent TypedMedia(int id);
 
 		#region extension method replacements
