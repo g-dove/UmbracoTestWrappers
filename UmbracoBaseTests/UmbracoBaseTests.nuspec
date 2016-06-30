@@ -14,8 +14,8 @@
     <dependencies>
       <dependency id="Gibe.UmbracoWrappers" version="1.1" />
     </dependencies>
-		<files>
-			<file src="bin\Release\Umbraco.Tests.dll" target="lib\net451" />
-		</files>
   </metadata>
+	<files>
+		<file src="bin\Release\Umbraco.Tests.dll" target="lib\net451" />
+	</files>
 </package>

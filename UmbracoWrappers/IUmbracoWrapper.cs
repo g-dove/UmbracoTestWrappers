@@ -14,7 +14,7 @@ namespace Gibe.UmbracoWrappers
 
 		IPublishedContent TypedContent(int id);
 		IPublishedContent TypedContent(string url);
-		IPublishedContent TypedMedia(int id);
+		IEnumerable<IPublishedContent> TypedContentAtRoot();		IPublishedContent TypedMedia(int id);
 
 		#region extension method replacements
 
@@ -53,6 +53,8 @@ namespace Gibe.UmbracoWrappers
 		IEnumerable<IPublishedContent> AncestorsOrSelf(IPublishedContent content, int maxLevel);
 		IEnumerable<IPublishedContent> AncestorsOrSelf(IPublishedContent content, string contentTypeAlias);
 
+		IEnumerable<IPublishedContent> Siblings(IPublishedContent content);
+
 		bool IsAncestor(IPublishedContent content, IPublishedContent ancestor);
 		bool IsAncestorOrSelf(IPublishedContent content, IPublishedContent ancestor);
 
@@ -63,6 +65,8 @@ namespace Gibe.UmbracoWrappers
 
 		bool IsVisible(IPublishedContent content);
 		
+		string UrlAbsolute(IPublishedContent content);
+
 		#endregion
 	}
 }

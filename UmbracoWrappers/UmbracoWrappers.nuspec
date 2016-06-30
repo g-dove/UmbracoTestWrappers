@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Gibe.UmbracoWrappers</id>
-    <version>$version$</version>
+    <version>1.2.1.0</version>
     <authors>Gibe Digital Ltd</authors>
     <owners>steve.temple</owners>
     <licenseUrl>https://raw.githubusercontent.com/stevetemple/UmbracoTestWrappers/master/LICENSE</licenseUrl>
