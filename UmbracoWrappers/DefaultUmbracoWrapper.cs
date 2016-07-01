@@ -11,10 +11,15 @@ namespace Gibe.UmbracoWrappers
 		{
 			return UmbracoContext.Current;
 		}
-
+				
 		public IPublishedContent TypedContent(int id)
 		{
 			return CurrentUmbracoContext().ContentCache.GetById(id);
+		}
+
+		public IPublishedContent TypedContent(string url)
+		{
+			return CurrentUmbracoContext().ContentCache.GetByRoute(url);
 		}
 
 		public IEnumerable<IPublishedContent> TypedContentAtRoot()
@@ -195,6 +200,6 @@ namespace Gibe.UmbracoWrappers
 		public string UrlAbsolute(IPublishedContent content)
 		{
 			return content.UrlAbsolute();
-		}
 	}
+}
 }

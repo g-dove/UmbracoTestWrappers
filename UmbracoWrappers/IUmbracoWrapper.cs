@@ -13,6 +13,7 @@ namespace Gibe.UmbracoWrappers
 		UmbracoContext CurrentUmbracoContext();
 
 		IPublishedContent TypedContent(int id);
+		IPublishedContent TypedContent(string url);
 		IEnumerable<IPublishedContent> TypedContentAtRoot();
 		IPublishedContent TypedMedia(int id);
 
@@ -44,7 +45,7 @@ namespace Gibe.UmbracoWrappers
 		IPublishedContent AncestorOrSelf(IPublishedContent content);
 		IPublishedContent AncestorOrSelf(IPublishedContent content, int maxLevel);
 		IPublishedContent AncestorOrSelf(IPublishedContent content, string contentTypeAlias);
-
+		
 		IEnumerable<IPublishedContent> Ancestors(IPublishedContent content);
 		IEnumerable<IPublishedContent> Ancestors(IPublishedContent content, int maxLevel);
 		IEnumerable<IPublishedContent> Ancestors(IPublishedContent content, string contentTypeAlias);
@@ -64,7 +65,7 @@ namespace Gibe.UmbracoWrappers
 		bool HasValue(IPublishedContent content, string alias);
 
 		bool IsVisible(IPublishedContent content);
-
+		
 		string UrlAbsolute(IPublishedContent content);
 
 		#endregion
