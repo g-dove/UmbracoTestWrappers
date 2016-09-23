@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Examine;
+using Examine.Providers;
+using Examine.SearchCriteria;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 
@@ -30,6 +34,16 @@ namespace Gibe.UmbracoWrappers
 		public IPublishedContent TypedMedia(int id)
 		{
 			return CurrentUmbracoContext().MediaCache.GetById(id);
+		}
+
+		public IEnumerable<IPublishedContent> TypedSearch(string term, bool useWildCards = true, string searchProvider = null)
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedSearch(term, useWildCards, searchProvider);
+		}
+
+		public IEnumerable<IPublishedContent> TypedSearch(ISearchCriteria searchParameters, BaseSearchProvider searchProvider = null)
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedSearch(searchParameters, searchProvider);
 		}
 
 		public IPublishedContent Descendant(IPublishedContent content)

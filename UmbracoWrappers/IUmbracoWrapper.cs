@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Examine.Providers;
+using Examine.SearchCriteria;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 
@@ -16,6 +18,8 @@ namespace Gibe.UmbracoWrappers
 		IPublishedContent TypedContent(string url);
 		IEnumerable<IPublishedContent> TypedContentAtRoot();
 		IPublishedContent TypedMedia(int id);
+		IEnumerable<IPublishedContent> TypedSearch(string term, bool useWildCards = true, string searchProvider = null);
+		IEnumerable<IPublishedContent> TypedSearch(ISearchCriteria searchParameters, BaseSearchProvider searchProvider = null);
 
 		#region extension method replacements
 
