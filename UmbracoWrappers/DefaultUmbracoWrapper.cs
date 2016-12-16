@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Umbraco.Core.Models;
 using Umbraco.Web;
+using Umbraco.Web.Security;
 
 namespace Gibe.UmbracoWrappers
 {
@@ -30,6 +31,11 @@ namespace Gibe.UmbracoWrappers
 		public IPublishedContent TypedMedia(int id)
 		{
 			return CurrentUmbracoContext().MediaCache.GetById(id);
+		}
+
+		public IPublishedContent TypedMember(int id)
+		{
+			return new MembershipHelper(UmbracoContext.Current).GetById(id);
 		}
 
 		public IPublishedContent Descendant(IPublishedContent content)
