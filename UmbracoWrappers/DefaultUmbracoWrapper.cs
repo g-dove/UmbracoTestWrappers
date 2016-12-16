@@ -35,7 +35,7 @@ namespace Gibe.UmbracoWrappers
 
 		public IPublishedContent TypedMember(int id)
 		{
-			return new MembershipHelper(UmbracoContext.Current).GetById(id);
+			return new MembershipHelper(CurrentUmbracoContext()).GetById(id);
 		}
 
 		public IPublishedContent Descendant(IPublishedContent content)
