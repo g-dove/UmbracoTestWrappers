@@ -190,6 +190,8 @@
     <Compile Include="DefaultUmbracoHelperWrapper.cs" />
     <Compile Include="DefaultUmbracoWrapper.cs" />
     <Compile Include="BaseRenderMvcController.cs" />
+    <Compile Include="ExamineSearchWrapper.cs" />
+    <Compile Include="IExamineSearchWrapper.cs" />
     <Compile Include="IUmbracoHelperWrapper.cs" />
     <Compile Include="IUmbracoWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

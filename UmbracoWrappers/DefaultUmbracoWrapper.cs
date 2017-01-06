@@ -214,6 +214,6 @@ namespace Gibe.UmbracoWrappers
 		public string UrlAbsolute(IPublishedContent content)
 		{
 			return content.UrlAbsolute();
+		}
 	}
-}
 }
