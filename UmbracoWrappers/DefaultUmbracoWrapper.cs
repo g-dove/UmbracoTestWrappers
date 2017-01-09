@@ -6,6 +6,7 @@ using Examine.Providers;
 using Examine.SearchCriteria;
 using Umbraco.Core.Models;
 using Umbraco.Web;
+using Umbraco.Web.Security;
 
 namespace Gibe.UmbracoWrappers
 {
@@ -34,6 +35,11 @@ namespace Gibe.UmbracoWrappers
 		public IPublishedContent TypedMedia(int id)
 		{
 			return CurrentUmbracoContext().MediaCache.GetById(id);
+		}
+
+		public IPublishedContent TypedMember(int id)
+		{
+			return new MembershipHelper(CurrentUmbracoContext()).GetById(id);
 		}
 
 		public IEnumerable<IPublishedContent> TypedSearch(string term, bool useWildCards = true, string searchProvider = null)
@@ -214,6 +220,6 @@ namespace Gibe.UmbracoWrappers
 		public string UrlAbsolute(IPublishedContent content)
 		{
 			return content.UrlAbsolute();
-		}
+	}
 	}
 }

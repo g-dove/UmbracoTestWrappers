@@ -18,6 +18,7 @@ namespace Gibe.UmbracoWrappers
 		IPublishedContent TypedContent(string url);
 		IEnumerable<IPublishedContent> TypedContentAtRoot();
 		IPublishedContent TypedMedia(int id);
+		IPublishedContent TypedMember(int id);
 		IEnumerable<IPublishedContent> TypedSearch(string term, bool useWildCards = true, string searchProvider = null);
 		IEnumerable<IPublishedContent> TypedSearch(ISearchCriteria searchParameters, BaseSearchProvider searchProvider = null);
 
