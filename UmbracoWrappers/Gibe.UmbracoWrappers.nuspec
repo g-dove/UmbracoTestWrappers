@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Gibe.UmbracoWrappers</id>
+    <version>$version$</version>
+    <authors>Gibe Digital Ltd</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Wrappers for Umbraco for testing
+    </description>
+    <dependencies>
+        <dependency id="UmbracoCms.Core" version="7.2.6" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Gibe.UmbracoWrappers.dll" target="lib" />
+  </files>
+</package>
