@@ -12,7 +12,7 @@
     <copyright>Copyright Gibe Digital Ltd 2015</copyright>
     <tags>Umbraco UnitTesting</tags>
     <dependencies>
-      <dependency id="Gibe.UmbracoWrappers" version="1.1" />
+      <dependency id="Gibe.UmbracoWrappers" version="$version$" />
     </dependencies>
   </metadata>
 	<files>
