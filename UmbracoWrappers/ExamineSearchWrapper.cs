@@ -9,12 +9,12 @@ namespace Gibe.UmbracoWrappers
 	{
 		public BaseSearchProvider InternalSearcher()
 		{
-			return ExamineManager.Instance.SearchProviderCollection["ExternalSearcher"];
+			return ExamineManager.Instance.SearchProviderCollection["InternalSearcher"];
 		}
 
 		public BaseSearchProvider ExternalSearcher()
 		{
-			return ExamineManager.Instance.SearchProviderCollection["InternalSearcher"];
+			return ExamineManager.Instance.SearchProviderCollection["ExternalSearcher"];
 		}
 
 		public BaseSearchProvider Searcher(string key)
