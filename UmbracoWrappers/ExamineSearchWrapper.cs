@@ -27,6 +27,11 @@ namespace Gibe.UmbracoWrappers
 			return searcher.CreateSearchCriteria();
 		}
 
+		public ISearchCriteria CreateMediaSearchCriteria(BaseSearchProvider searcher)
+		{
+			return searcher.CreateSearchCriteria("media");
+		}
+
 		public ISearchCriteria Compile(IBooleanOperation criteria)
 		{
 			return criteria.Compile();
@@ -81,7 +86,6 @@ namespace Gibe.UmbracoWrappers
 		{
 			return operation.Not();
 		}
-
 		public ISearchResults Search(BaseSearchProvider searcher, ISearchCriteria criteria)
 		{
 			return searcher.Search(criteria);

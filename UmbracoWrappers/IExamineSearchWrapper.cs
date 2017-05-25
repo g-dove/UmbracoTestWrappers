@@ -14,6 +14,7 @@ namespace Gibe.UmbracoWrappers
 		#region extension method replacements
 
 		ISearchCriteria CreateSearchCriteria(BaseSearchProvider searcher);
+		ISearchCriteria CreateMediaSearchCriteria(BaseSearchProvider searcher);
 		ISearchCriteria Compile(IBooleanOperation criteria);
 		ISearchCriteria RawQuery(ISearchCriteria criteria, string query);
 		IBooleanOperation Field(ISearchCriteria criteria, string fieldName, IExamineValue fieldValue);
