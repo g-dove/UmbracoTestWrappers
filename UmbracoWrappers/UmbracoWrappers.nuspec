@@ -12,7 +12,7 @@
     <copyright>Copyright Gibe Digital Ltd 2016</copyright>
     <tags>Umbraco UnitTesting</tags>
     <dependencies>
-      <dependency id="UmbracoCms.Core" version="7.2.6" />
+      <dependency id="UmbracoCms.Core" version="7.6.4" />
     </dependencies>
   </metadata>
 </package>
