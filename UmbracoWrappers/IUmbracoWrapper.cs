@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Examine.Providers;
 using Examine.SearchCriteria;
+using Umbraco.Core;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 
@@ -18,6 +19,7 @@ namespace Gibe.UmbracoWrappers
 		IPublishedContent TypedContent(string url);
 		IEnumerable<IPublishedContent> TypedContentAtRoot();
 		IPublishedContent TypedMedia(int id);
+		IPublishedContent TypedMedia(Udi udi);
 		IPublishedContent TypedMember(int id);
 		IEnumerable<IPublishedContent> TypedSearch(string term, bool useWildCards = true, string searchProvider = null);
 		IEnumerable<IPublishedContent> TypedSearch(ISearchCriteria searchParameters, BaseSearchProvider searchProvider = null);

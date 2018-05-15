@@ -4,6 +4,7 @@ using System.Linq;
 using Examine;
 using Examine.Providers;
 using Examine.SearchCriteria;
+using Umbraco.Core;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 using Umbraco.Web.Security;
@@ -35,6 +36,11 @@ namespace Gibe.UmbracoWrappers
 		public IPublishedContent TypedMedia(int id)
 		{
 			return CurrentUmbracoContext().MediaCache.GetById(id);
+		}
+
+		public IPublishedContent TypedMedia(Udi udi)
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedMedia(udi);
 		}
 
 		public IPublishedContent TypedMember(int id)

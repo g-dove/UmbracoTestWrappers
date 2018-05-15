@@ -9,7 +9,7 @@
       Wrappers for Umbraco for testing
     </description>
     <dependencies>
-        <dependency id="UmbracoCms.Core" version="7.2.6" />
+        <dependency id="UmbracoCms.Core" version="7.9.4" />
     </dependencies>
   </metadata>
   <files>
