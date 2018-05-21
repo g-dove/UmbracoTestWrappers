@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Examine;
+﻿using System.Collections.Generic;
 using Examine.Providers;
 using Examine.SearchCriteria;
 using Umbraco.Core;
@@ -28,6 +25,16 @@ namespace Gibe.UmbracoWrappers
 			return CurrentUmbracoContext().ContentCache.GetByRoute(url);
 		}
 
+		public IPublishedContent TypedContent(Udi udi)
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedContent(udi);
+		}
+
+		public IEnumerable<IPublishedContent> TypedContent(IEnumerable<Udi> udis)
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedContent(udis);
+		}
+
 		public IEnumerable<IPublishedContent> TypedContentAtRoot()
 		{
 			return new UmbracoHelper(CurrentUmbracoContext()).TypedContentAtRoot();
@@ -41,6 +48,10 @@ namespace Gibe.UmbracoWrappers
 		public IPublishedContent TypedMedia(Udi udi)
 		{
 			return new UmbracoHelper(CurrentUmbracoContext()).TypedMedia(udi);
+		}
+		public IEnumerable<IPublishedContent> TypedMedia(IEnumerable<Udi> udis)
+		{
+			return new UmbracoHelper(CurrentUmbracoContext()).TypedMedia(udis);
 		}
 
 		public IPublishedContent TypedMember(int id)
