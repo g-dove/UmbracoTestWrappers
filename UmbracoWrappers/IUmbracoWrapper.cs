@@ -4,32 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Examine.Providers;
-using Examine.SearchCriteria;
+using Examine.Search;
 using Umbraco.Core;
 using Umbraco.Core.Models;
+using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 
 namespace Gibe.UmbracoWrappers
 {
 	public interface IUmbracoWrapper
 	{
-		UmbracoContext CurrentUmbracoContext();
-
-		IPublishedContent TypedContent(int id);
-		IPublishedContent TypedContent(string url);
-		IPublishedContent TypedContent(Udi udi);
-		IEnumerable<IPublishedContent> TypedContent(IEnumerable<Udi> udi);
-
-		IEnumerable<IPublishedContent> TypedContentAtRoot();
-		IPublishedContent TypedMedia(int id);
-		IPublishedContent TypedMedia(Udi udi);
-		IEnumerable<IPublishedContent> TypedMedia(IEnumerable<Udi> udi);
-		IPublishedContent TypedMember(int id);
-		IEnumerable<IPublishedContent> TypedSearch(string term, bool useWildCards = true, string searchProvider = null);
-		IEnumerable<IPublishedContent> TypedSearch(ISearchCriteria searchParameters, BaseSearchProvider searchProvider = null);
-
-		#region extension method replacements
-
 		IPublishedContent Descendant(IPublishedContent content);
 		IPublishedContent Descendant(IPublishedContent content, int level);
 		IPublishedContent Descendant(IPublishedContent content, string contentTypeAlias);
@@ -65,20 +49,16 @@ namespace Gibe.UmbracoWrappers
 		IEnumerable<IPublishedContent> AncestorsOrSelf(IPublishedContent content, int maxLevel);
 		IEnumerable<IPublishedContent> AncestorsOrSelf(IPublishedContent content, string contentTypeAlias);
 
-		IEnumerable<IPublishedContent> Siblings(IPublishedContent content);
-
 		bool IsAncestor(IPublishedContent content, IPublishedContent ancestor);
 		bool IsAncestorOrSelf(IPublishedContent content, IPublishedContent ancestor);
 
-		T GetPropertyValue<T>(IPublishedContent content, string alias);
+		T Value<T>(IPublishedContent content, string alias);
 
 		bool HasProperty(IPublishedContent content, string alias);
 		bool HasValue(IPublishedContent content, string alias);
 
 		bool IsVisible(IPublishedContent content);
-		
 		string UrlAbsolute(IPublishedContent content);
 
-		#endregion
 	}
 }

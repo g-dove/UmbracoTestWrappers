@@ -8,6 +8,7 @@ using Umbraco.Tests.TestHelpers;
 using Umbraco.Web;
 using Umbraco.Web.Routing;
 using Gibe.UmbracoWrappers;
+using Umbraco.Core.Models.PublishedContent;
 
 namespace Gibe.UmbracoBaseTests
 {

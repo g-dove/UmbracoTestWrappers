@@ -1,74 +1,11 @@
 ﻿using System.Collections.Generic;
-using Examine.Providers;
-using Examine.SearchCriteria;
-using Umbraco.Core;
-using Umbraco.Core.Models;
+using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
-using Umbraco.Web.Security;
 
 namespace Gibe.UmbracoWrappers
 {
 	public class DefaultUmbracoWrapper : IUmbracoWrapper
 	{
-		public UmbracoContext CurrentUmbracoContext()
-		{
-			return UmbracoContext.Current;
-		}
-				
-		public IPublishedContent TypedContent(int id)
-		{
-			return CurrentUmbracoContext().ContentCache.GetById(id);
-		}
-
-		public IPublishedContent TypedContent(string url)
-		{
-			return CurrentUmbracoContext().ContentCache.GetByRoute(url);
-		}
-
-		public IPublishedContent TypedContent(Udi udi)
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedContent(udi);
-		}
-
-		public IEnumerable<IPublishedContent> TypedContent(IEnumerable<Udi> udis)
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedContent(udis);
-		}
-
-		public IEnumerable<IPublishedContent> TypedContentAtRoot()
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedContentAtRoot();
-		}
-
-		public IPublishedContent TypedMedia(int id)
-		{
-			return CurrentUmbracoContext().MediaCache.GetById(id);
-		}
-
-		public IPublishedContent TypedMedia(Udi udi)
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedMedia(udi);
-		}
-		public IEnumerable<IPublishedContent> TypedMedia(IEnumerable<Udi> udis)
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedMedia(udis);
-		}
-
-		public IPublishedContent TypedMember(int id)
-		{
-			return new MembershipHelper(CurrentUmbracoContext()).GetById(id);
-		}
-
-		public IEnumerable<IPublishedContent> TypedSearch(string term, bool useWildCards = true, string searchProvider = null)
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedSearch(term, useWildCards, searchProvider);
-		}
-
-		public IEnumerable<IPublishedContent> TypedSearch(ISearchCriteria searchParameters, BaseSearchProvider searchProvider = null)
-		{
-			return new UmbracoHelper(CurrentUmbracoContext()).TypedSearch(searchParameters, searchProvider);
-		}
-
 		public IPublishedContent Descendant(IPublishedContent content)
 		{
 			return content.Descendant();
@@ -198,12 +135,7 @@ namespace Gibe.UmbracoWrappers
 		{
 			return content.AncestorsOrSelf(contentTypeAlias);
 		}
-
-		public IEnumerable<IPublishedContent> Siblings(IPublishedContent content)
-		{
-			return content.Siblings();
-		}
-
+		
 		public bool IsAncestor(IPublishedContent content, IPublishedContent ancestor)
 		{
 			return content.IsAncestor(ancestor);
@@ -214,9 +146,9 @@ namespace Gibe.UmbracoWrappers
 			return content.IsAncestorOrSelf(ancestor);
 		}
 
-		public T GetPropertyValue<T>(IPublishedContent content, string alias)
+		public T Value<T>(IPublishedContent content, string alias)
 		{
-			return content.GetPropertyValue<T>(alias);
+			return content.Value<T>(alias);
 		}
 
 		public bool HasProperty(IPublishedContent content, string alias)
